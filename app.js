@@ -5,8 +5,12 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongoose = require('mongoose');
+require('dotenv').config();
 
-mongoose.connect('mongodb://127.0.0.1:27017/bookstore');
+mongoose.connect(process.env.DB_HOST);
+
+console.log(host);
+
 var db = mongoose.connection;
 
 var index = require('./routes/index');
