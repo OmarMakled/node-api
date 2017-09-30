@@ -9,8 +9,6 @@ require('dotenv').config();
 
 mongoose.connect(process.env.DB_HOST);
 
-console.log(host);
-
 var db = mongoose.connection;
 
 var index = require('./routes/index');
